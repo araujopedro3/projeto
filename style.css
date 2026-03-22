@@ -27,10 +27,11 @@
 }
 
 /*body {
-  /*background-image: url(./assets/bg-mobile.jpg);
+  background-image: url(./assets/bg-mobile.jpg);
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;*/
+  background-size: cover; 
+}*/
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
@@ -178,7 +179,7 @@ footer {
 /* media queries */
 @media (min-width: 700px) {
   :root {
-    --bg-url: url(./assetes/bg-desktop.jpg);
+    --bg-url: url(./assets/bg-desktop.jpg);
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
