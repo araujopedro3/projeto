@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.1);
+  /* Cor do Brilho no Modo Escuro (Azul Neon) */
+  --highlight-color: #00f2ff;
+}
+
+.light {
+  --text-color: #2d3436;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.3);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.1);
+  /* Cor do Brilho no Modo Claro (Dourado/Laranja) */
+  --highlight-color: #3f37c9;
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  transition:
+    background 0.5s,
+    color 0.5s;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+#container {
+  max-width: 360px;
+  width: 100%;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+  border-radius: 50%; /* Garante que a foto fique redonda */
+}
+
+#profile p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* Links - Lista */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease; /* Transição mais suave para o brilho */
+}
+
+/* Efeito de Brilho nos Botões */
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--highlight-color);
+  transform: scale(1.02);
+
+  /* Brilho colorido dinâmico */
+  box-shadow: 0 0 15px var(--highlight-color);
+  text-shadow: 0 0 5px var(--highlight-color);
+}
+
+/* Social Links */
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--surface-color-hover);
+  transform: translateY(-8px);
+
+  /* Brilho colorido nos ícones */
+  box-shadow: 0 0 25px var(--highlight-color);
+  filter: drop-shadow(0 0 5px var(--highlight-color));
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/*
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}*/
